@@ -10,12 +10,12 @@ class TestUtils(unittest.TestCase):
         self.assertEqual(utils.fact(4), 24)
     
     def test_roots(self):
-        self.assertEqual(utils.roots(1, -2, 1), (1))
+        self.assertEqual(utils.roots(1, -2, 1), (1.0,))
         # self.assertEqual(utils.roots(1, 1, 1), ())
         # self.assertEqual(utils.roots(1, -2, -8), (4, -2))
     
     def test_integrate(self):
-        self.assertEqual(utils.integrate("x**2", 0, 2), 8/3)
+        self.assertEqual(utils.integrate("x**2", 0, 2), round(8/3, 4))
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(TestUtils)
